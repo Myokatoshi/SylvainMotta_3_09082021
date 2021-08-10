@@ -1,0 +1,60 @@
+
+.localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %paddingblock;
+    background-color: $color-background-repeat-block;
+    &_block {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        margin: auto;
+        font-weight: bold;
+        font-size: 10px;
+        color: #3f3f3f;
+    }
+}
+
+.mapmaker {
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.explore-restaurant {
+    @extend %paddingblock;
+    text-align: center;
+    background-color: hsl(0, 0%, 97%);
+    &_blocktext {
+        & span {
+            color: #666666;
+            font-size: 18px;
+        }
+        margin-bottom: 30px;    
+    }
+    &_btn {
+        @include button;
+        &:hover {
+            background-image: linear-gradient(hsl(317, 100%, 76%), hsl(267, 66%, 62%)) ;
+            box-shadow: 2px 2px 15px hsl(0, 0%, 35%);
+        }
+    }
+}
+
+.functioning {
+    @extend %paddingblock;
+    &_tuto {
+        list-style: none;
+        margin: 0;
+        padding: 0;        
+    }
+    &_block1 {
+        @include blocktuto; 
+    }
+    &_block2 {
+        @include blocktuto;
+    }
+    &_block3 {
+        @include blocktuto;
+    }
+}    

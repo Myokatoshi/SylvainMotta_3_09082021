@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    @extend %paddingblock;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 30%);
+    position: relative;
+    height: 30px;
+    &_logo {
+        margin: auto;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
