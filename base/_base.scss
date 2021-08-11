@@ -2,7 +2,7 @@ body {
     @extend %font-secondary;
 }
 
-.header_logo {
+.header_logo, .footer_title {
     @extend %font-primary;
 }
 
@@ -11,7 +11,7 @@ body {
     display: block;
 }
 
-header {
+header, footer {
     display: block;
 }
 
@@ -23,4 +23,12 @@ a {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.functioning_block1_number, .functioning_block2_number, .functioning_block3_number {
+    font-weight: initial;
+}
+
+footer li {
+    margin-bottom: 10px;
 }

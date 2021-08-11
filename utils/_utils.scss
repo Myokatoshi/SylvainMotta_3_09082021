@@ -1,10 +1,10 @@
 
 %font-primary { 
-    font-family: "Shrikhand", sans-serif;
+    font-family: Shrikhand, "sans-serif";
 }
 
 %font-secondary {
-    font-family: "Roboto", cursive;
+    font-family: Roboto, "cursive";
 }
 
 %paddingblock {
@@ -12,12 +12,28 @@
 }
 
 @mixin blocktuto {
-    box-shadow: 2px 2px 15px hsl(0, 0%, 75%);
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding: 1rem 1.25rem;
-    border-radius: 1rem;
+    box-shadow: 3px 3px 15px hsl(0, 0%, 75%);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 1.5rem 1.75rem;
+    border-radius: 1.25rem;
+    font-weight: bold;
     background-color: $color-background-repeat-block;
+}
+
+@mixin blocktutopurple {
+    box-shadow: 3px 3px 15px hsl(0, 0%, 75%);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 1.5rem 1.75rem;
+    border-radius: 1.25rem;
+    font-weight: bold;
+    background-color: lighten($color-primary, 35%);
+}
+
+@mixin icontuto {
+    margin-right: 20px;
+    color: #666666;
 }
 
 $color-primary: #9356DC;
@@ -38,3 +54,10 @@ $color-background-footer: #333435;
     color: white;
 }
 
+@mixin input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;    
+}

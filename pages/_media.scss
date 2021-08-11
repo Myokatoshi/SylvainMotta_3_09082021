@@ -1,0 +1,63 @@
+@media only screen and (min-width: 1001px) {
+    .functioning_tuto {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+        "title title title"
+        "block1 block2 block3";
+        column-gap: 1.25rem;
+    }    
+    .functioning_block1 {
+        grid-area: block1;
+    }
+    .functioning_block2 {
+        grid-area: block2;
+    }
+    .functioning_block3 {
+        grid-area: block3;
+    }  
+}
+
+@media only screen and (min-width: 750px) {
+    .restaurants {
+        &_title {
+            grid-area: rt;
+        }
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+        "rt rt"
+        "rc1 rc2"
+        "rc3 rc4";
+        column-gap: 1.25rem;
+    }
+
+    .rc1 {
+        grid-area: rc1;
+        width: 100%;
+        margin: 0;
+        justify-self: end;
+    }
+    .rc2 {
+        grid-area: rc2;
+        width: 100%;
+        margin: 0;
+    }
+    .rc3 {
+        grid-area: rc3;
+        width: 100%;
+        margin: 0;
+        justify-self: end;
+    }
+    .rc4 {
+        grid-area: rc4;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1470px) {
+    .restaurants {
+        border-radius: 2rem;
+    }
+}

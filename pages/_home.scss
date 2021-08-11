@@ -43,18 +43,139 @@
 
 .functioning {
     @extend %paddingblock;
+    max-width: 1430px;
+    margin: auto;
     &_tuto {
         list-style: none;
         margin: 0;
-        padding: 0;        
+        margin-top: 30px;
+        padding: 0;
+        &_iconphone {
+            @include icontuto;
+            font-size: 20px;
+        }
+        &_iconlist {
+            @include icontuto;
+            font-size: 15px;
+        }
+        &_purpleicon {
+            color: $color-primary;
+            margin-right: 20px;
+            font-size: 14px;
+        }        
     }
     &_block1 {
-        @include blocktuto; 
+        position: relative;
+        @include blocktuto;
+        &_number { 
+            background: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: -0.8rem;
+        } 
     }
     &_block2 {
         @include blocktuto;
+        position: relative;
+        &_number { 
+            background: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: -0.8rem;
+        }
     }
     &_block3 {
-        @include blocktuto;
+        @include blocktutopurple;
+        position: relative;
+        &_number { 
+            background: $color-primary;
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: -0.8rem;
+        }
     }
-}    
+}
+
+.restaurants {
+    background-color: $color-background-repeat-block;
+    @extend %paddingblock;
+    max-width: 1430px;
+    margin: auto;
+    &_cards {
+        position: relative;
+        background-color: white;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        margin-bottom: 1.25rem;
+        box-shadow: 3px 3px 15px hsl(0, 0%, 75%);
+        &_input {
+            @include input;
+        }
+        &_figure {
+            position: relative;
+            margin: 0;
+        }
+        &_picture {
+            width: 100%;
+            height: 175px;
+            border-radius: 1rem 1rem 0 0;
+            object-fit: cover;
+        }
+        &_new {
+            background-color: $color-tertiary;
+            color: darken($color-tertiary, 40%);
+            padding: 0.5rem 0.75rem;
+            border-radius: .2rem;
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            top: 1rem;
+            right: .75rem;
+        }
+        &_figcaption {
+            position: relative;
+            padding: 1rem;
+            &_title {
+                margin: 0;
+            }
+            &_heart {
+                font-size: 23px;
+                position: absolute;
+                right: 1.3rem;
+                bottom: 1.75rem;
+                color: #666666;
+                &:hover {
+                    display: none;
+                }
+            }
+            &_heartliked {
+                visibility: hidden;
+                font-size: 23px;
+                position: absolute;
+                right: 1.3rem;
+                bottom: 1.75rem;
+                &:hover {
+                    visibility: initial;
+                }
+            }
+        }        
+    }
+}
