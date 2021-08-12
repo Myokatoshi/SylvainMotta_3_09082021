@@ -1,3 +1,18 @@
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: hsla(0,0%,100%,0.9);
+    animation: loader 0.01s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
 .localisation {
     display: flex;
@@ -129,7 +144,7 @@
         &_input {
             @include input;
         }
-        &_figure {
+        &_figure { 
             position: relative;
             margin: 0;
         }
@@ -157,23 +172,23 @@
                 margin: 0;
             }
             &_heart {
-                font-size: 23px;
                 position: absolute;
                 right: 1.3rem;
                 bottom: 1.75rem;
-                color: #666666;
-                &:hover {
-                    display: none;
-                }
+                content: "\f004";   
             }
             &_heartliked {
-                visibility: hidden;
-                font-size: 23px;
+                display: block;
+                color: transparent;
                 position: absolute;
-                right: 1.3rem;
-                bottom: 1.75rem;
-                &:hover {
-                    visibility: initial;
+                right: 1.27rem;
+                bottom: 1.66rem;
+                &:hover, &:focus {
+                    width: 24.5px;
+                    font-size: 24.5px;
+                    background: -webkit-linear-gradient($color-primary, $color-secondary);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;                    
                 }
             }
         }        

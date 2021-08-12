@@ -1,23 +1,4 @@
-@media only screen and (min-width: 1001px) {
-    .functioning_tuto {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-areas:
-        "title title title"
-        "block1 block2 block3";
-        column-gap: 1.25rem;
-    }    
-    .functioning_block1 {
-        grid-area: block1;
-    }
-    .functioning_block2 {
-        grid-area: block2;
-    }
-    .functioning_block3 {
-        grid-area: block3;
-    }  
-}
-
+/*passage de la section restaurants en grid de 2 colonnes*/
 @media only screen and (min-width: 750px) {
     .restaurants {
         &_title {
@@ -56,6 +37,28 @@
     }
 }
 
+/*passage de la section functioning en grid de 3 colonnes*/
+@media only screen and (min-width: 1001px) {
+    .functioning_tuto {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+        "title title title"
+        "block1 block2 block3";
+        column-gap: 1.25rem;
+    }    
+    .functioning_block1 {
+        grid-area: block1;
+    }
+    .functioning_block2 {
+        grid-area: block2;
+    }
+    .functioning_block3 {
+        grid-area: block3;
+    }  
+}
+
+/*une touche visuelle pour la section restaurants sur grand ecran*/
 @media only screen and (min-width: 1470px) {
     .restaurants {
         border-radius: 2rem;

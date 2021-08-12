@@ -32,3 +32,10 @@ a {
 footer li {
     margin-bottom: 10px;
 }
+
+.restaurants_cards_figcaption {
+    &_heart, &_heartliked {
+    font-family: "Font Awesome 5 Free";
+    font-size: 23px;
+    }
+}
