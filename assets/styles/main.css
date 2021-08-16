@@ -41,7 +41,7 @@ body {
   font-family: Roboto, "cursive";
 }
 
-.order_btn, .menu, .restaurants, .functioning, .explore-restaurant_btn, .explore-restaurant, .localisation, .footer, .header {
+.order_btn, .menu_meal_list, .menu, .restaurants, .functioning, .explore-restaurant_btn, .explore-restaurant, .localisation, .footer, .header {
   padding: 1rem 1.25rem;
 }
 
@@ -429,9 +429,11 @@ body {
 .restaurants_cards_figcaption {
   position: relative;
   padding: 1rem;
+  color: #3f3f3f;
 }
 .restaurants_cards_figcaption_title {
   margin: 0;
+  color: initial;
 }
 .restaurants_cards_figcaption_heart {
   position: absolute;
@@ -457,7 +459,11 @@ body {
 }
 
 .menu {
+  position: relative;
+  z-index: 1;
+  margin-top: -60px;
   background-color: #F7F7F7;
+  border-radius: 2rem 2rem 0 0;
   z-index: 1;
 }
 .menu_header {
@@ -469,6 +475,7 @@ body {
   right: 1.35rem;
   bottom: 1.4rem;
   font-size: 23px;
+  color: #3f3f3f;
 }
 .menu_header_heartliked {
   display: block;
@@ -489,6 +496,31 @@ body {
 .menu_title {
   font-weight: 400;
   margin: 0;
+}
+.menu_meal_title {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #3f3f3f;
+  font-size: 15px;
+}
+.menu_meal_list {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 15px #bfbfbf;
+}
+.menu_meal_list_title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.menu_meal_list_accompaniment {
+  color: #3f3f3f;
+}
+.menu_meal_list_price {
+  font-weight: bold;
+  color: #3f3f3f;
+  display: inline-block;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .restaurants_cards_picture--modifier {

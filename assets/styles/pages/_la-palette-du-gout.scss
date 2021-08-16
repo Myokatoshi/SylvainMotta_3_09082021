@@ -1,6 +1,10 @@
 .menu {
+    position: relative;
+    z-index: 1;
+    margin-top: -60px;
     @extend %paddingblock;
     background-color: #F7F7F7;
+    border-radius: 2rem 2rem 0 0;
     z-index: 1;
     &_header {
         position: relative;
@@ -9,7 +13,8 @@
             position: absolute;
             right: 1.35rem;
             bottom: 1.4rem;
-            font-size: 23px;   
+            font-size: 23px;
+            color: #3f3f3f;   
         }
         &_heartliked {
             display: block;
@@ -31,7 +36,37 @@
         font-weight: 400;
         margin: 0;
     }
+    &_meal {
+        &_title {
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #3f3f3f;
+            font-size: 15px;
+        }
+        &_list {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 3px 3px 15px hsl(0, 0%, 75%);
+            @extend %paddingblock;
+            &_title {
+                margin: 0;
+                margin-bottom: 5px;
+            }
+            &_accompaniment {
+                color: #3f3f3f;                    
+            }
+            &_price {
+                font-weight: bold;
+                color: #3f3f3f;
+                display: inline-block;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+        }
+    }
 }
+
+
 
 .restaurants_cards_picture--modifier {
     z-index: -1;
