@@ -2,8 +2,9 @@ body {
     @extend %font-secondary;
 }
 
-.header_logo, .footer_title {
+.header_logo, .footer_title, .menu_title {
     @extend %font-primary;
+    font-weight: 400;
 }
 
 .container {
@@ -36,6 +37,5 @@ footer li {
 .restaurants_cards_figcaption {
     &_heart, &_heartliked {
     font-family: "Font Awesome 5 Free";
-    font-size: 23px;
     }
 }
