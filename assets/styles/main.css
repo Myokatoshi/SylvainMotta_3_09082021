@@ -41,7 +41,7 @@ body {
   font-family: Roboto, "cursive";
 }
 
-.order_btn, .menu_meal_list, .menu, .restaurants, .functioning, .explore-restaurant_btn, .explore-restaurant, .localisation, .footer, .header {
+.order_btn, .menu_meal_lists, .menu, .restaurants, .functioning, .explore-restaurant_btn, .explore-restaurant, .localisation, .footer, .header {
   padding: 1rem 1.25rem;
 }
 
@@ -145,6 +145,35 @@ body {
 
   .functioning_block3 {
     grid-area: block3;
+  }
+}
+/*passage de la section menu en grid de 3 colonnes*/
+@media only screen and (min-width: 1180px) {
+  .menu {
+    display: grid;
+    grid-template-areas: "mh mh mh" "mm1 mm2 mm3" "order_btn order_btn order_btn";
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+
+  .mh {
+    grid-area: mh;
+  }
+
+  .mm1 {
+    grid-area: mm1;
+  }
+
+  .mm2 {
+    grid-area: mm2;
+  }
+
+  .mm3 {
+    grid-area: mm3;
+  }
+
+  .order_btn {
+    grid-area: order_btn;
   }
 }
 /*une touche visuelle pour la section restaurants sur grand ecran*/
@@ -289,7 +318,7 @@ body {
 }
 .explore-restaurant_btn:hover {
   background-image: linear-gradient(#ff85dc, #985ede);
-  box-shadow: 2px 2px 15px #595959;
+  box-shadow: 2px 2px 15px gray;
 }
 
 .functioning {
@@ -458,35 +487,49 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.restaurants_cards_picture--modifier {
+  z-index: -1;
+  border-radius: 0;
+  height: 250px;
+}
+
 .menu {
   position: relative;
   z-index: 1;
   margin-top: -60px;
   background-color: #F7F7F7;
   border-radius: 2rem 2rem 0 0;
-  z-index: 1;
 }
 .menu_header {
-  position: relative;
-  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
-.menu_header_heart {
-  position: absolute;
-  right: 1.35rem;
-  bottom: 1.4rem;
+.menu_header_icons {
+  position: relative;
+  height: 24.5px;
+  width: 24.5px;
+}
+.menu_header_icons_heart {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 23px;
   font-size: 23px;
   color: #3f3f3f;
 }
-.menu_header_heartliked {
+.menu_header_icons_heartliked {
   display: block;
   color: transparent;
   position: absolute;
   font-size: 10px;
-  right: 1.75rem;
-  bottom: 1.84rem;
+  right: 0.45rem;
+  bottom: -0.1rem;
   transition: all 0.5s;
 }
-.menu_header_heartliked:hover, .menu_header_heartliked:active {
+.menu_header_icons_heartliked:hover, .menu_header_icons_heartliked:active {
   transform: scale(2.45);
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -495,38 +538,62 @@ body {
 }
 .menu_title {
   font-weight: 400;
+  font-size: 28px;
   margin: 0;
+  margin-bottom: 10px;
 }
 .menu_meal_title {
+  position: relative;
   text-transform: uppercase;
+  height: 26px;
   font-weight: 400;
   color: #3f3f3f;
-  font-size: 15px;
+  font-size: 16px;
 }
-.menu_meal_list {
+.menu_meal_title::after {
+  content: "";
+  width: 39px;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.menu_meal_lists {
+  display: flex;
   background-color: white;
+  margin: 20px 0 20px 0;
   border-radius: 1rem;
   box-shadow: 3px 3px 15px #bfbfbf;
 }
-.menu_meal_list_title {
+.menu_meal_lists_block1 {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu_meal_lists_block1--title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin: 0;
   margin-bottom: 5px;
 }
-.menu_meal_list_accompaniment {
+.menu_meal_lists_block1--accompaniment {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: #3f3f3f;
+  font-size: 15px;
 }
-.menu_meal_list_price {
+.menu_meal_lists_price {
   font-weight: bold;
   color: #3f3f3f;
-  display: inline-block;
-  justify-content: flex-end;
+  display: flex;
   align-items: flex-end;
-}
-
-.restaurants_cards_picture--modifier {
-  z-index: -1;
-  border-radius: 0;
-  height: 250px;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
 .order_btn {
@@ -540,8 +607,12 @@ body {
   width: -moz-max-content;
   width: max-content;
   color: white;
+  width: 150px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .order_btn:hover {
   background-image: linear-gradient(#ff85dc, #985ede);
-  box-shadow: 2px 2px 15px #595959;
+  box-shadow: 2px 2px 15px gray;
 }/*# sourceMappingURL=main.css.map */

@@ -55,7 +55,34 @@
     }
     .functioning_block3 {
         grid-area: block3;
-    }  
+    }
+}
+
+/*passage de la section menu en grid de 3 colonnes*/
+@media only screen and (min-width: 1180px) {
+    .menu {
+        display: grid;
+        grid-template-areas:
+        "mh mh mh"
+        "mm1 mm2 mm3"
+        "order_btn order_btn order_btn";
+        column-gap: 40px;
+    }
+    .mh {
+        grid-area: mh;
+    }
+    .mm1 {
+        grid-area: mm1;
+    }
+    .mm2 {
+        grid-area: mm2;
+    }
+    .mm3 {
+        grid-area: mm3;
+    }
+    .order_btn {
+        grid-area: order_btn;
+    }
 }
 
 /*une touche visuelle pour la section restaurants sur grand ecran*/

@@ -65,7 +65,7 @@
         @include button;
         &:hover {
             background-image: linear-gradient(hsl(317, 100%, 76%), hsl(267, 66%, 62%)) ;
-            box-shadow: 2px 2px 15px hsl(0, 0%, 35%);
+            box-shadow: 2px 2px 15px hsl(0, 0%, 50%);
         }
     }
 }
