@@ -64,7 +64,7 @@
                 content: "";
                 width: 39px;
                 height: 3px;
-                background-color: #99e2d0;
+                background-color: $color-tertiary;
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -72,11 +72,22 @@
         }
         &_lists {
             display: flex;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
             background-color: white;
             margin: 20px 0 20px 0;
             border-radius: 1rem;
             box-shadow: 3px 3px 15px hsl(0, 0%, 75%);
             @extend %paddingblock;
+            animation: spawnlists 0.75s both cubic-bezier(.58,1.5,.3,.87);
+            transform: scale(0);
+            &:hover &_check {
+                margin-right: -20px;                       
+            }
+            &:hover &_check--modifier {
+                transform: rotateZ(0);
+            }
             &_block1 {
                 flex: 1;
                 white-space: nowrap;
@@ -90,7 +101,6 @@
                     margin-bottom: 5px;    
                 }
                 &--accompaniment {
-                    flex: 1;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
@@ -102,13 +112,37 @@
                 font-weight: bold;
                 color: #3f3f3f;
                 display: flex;
-                align-items: flex-end;
+                align-self: flex-end;
                 font-size: 15px;
                 padding-left: 10px;
+            }
+            &_check {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $color-tertiary;
+                color: white;
+                transform: translateX(0);
+                transition-duration: 0.75s;
+                margin: -24.5px -99px -24.5px 20px;
+                height: 79px;
+                width: 79px;
+                border-radius: 0 1rem 1rem 0;
+                &--modifier {
+                    font-size: 30px;
+                    transform: rotateZ(180deg);
+                    transition-duration: 0.75s;
+                }
             }
         }    
     }
 }
+
+@for $i from 0 to 10 {
+    .spawndelay--#{$i} {
+      animation-delay: #{$i/10}s;
+    }
+  }
 
 .order_btn {    
     @include button;

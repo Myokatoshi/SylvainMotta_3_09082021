@@ -62,6 +62,7 @@
 @media only screen and (min-width: 1180px) {
     .menu {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
         "mh mh mh"
         "mm1 mm2 mm3"
