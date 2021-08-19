@@ -68,6 +68,9 @@
         "mm1 mm2 mm3"
         "order_btn order_btn order_btn";
         column-gap: 40px;
+        &_meal {
+            overflow: hidden;
+        }
     }
     .mh {
         grid-area: mh;

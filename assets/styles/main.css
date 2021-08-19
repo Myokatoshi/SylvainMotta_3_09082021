@@ -172,6 +172,9 @@ body {
     -moz-column-gap: 40px;
          column-gap: 40px;
   }
+  .menu_meal {
+    overflow: hidden;
+  }
 
   .mh {
     grid-area: mh;
