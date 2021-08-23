@@ -67,9 +67,10 @@
         "mh mh mh"
         "mm1 mm2 mm3"
         "order_btn order_btn order_btn";
-        column-gap: 40px;
         &_meal {
             overflow: hidden;
+            padding-right: 20px;
+            padding-left: 20px;
         }
     }
     .mh {
